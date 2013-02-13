@@ -1,4 +1,7 @@
 Web7::Application.routes.draw do
+  resources :products
+
+
   get "staticpages/home"
 
   get "staticpages/about"
@@ -13,6 +16,8 @@ Web7::Application.routes.draw do
   match '/help', :to => 'staticpages#help'
   match '/about', :to => 'staticpages#about'
   match '/contact', :to => 'staticpages#contact'
+  
+  match '/products/', :to => 'products#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
