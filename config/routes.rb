@@ -8,6 +8,11 @@ Web7::Application.routes.draw do
   get "staticpages/help"
   
   root :to => 'staticpages#home'
+  
+  match '/home', :to => 'staticpages#home'
+  match '/help', :to => 'staticpages#help'
+  match '/about', :to => 'staticpages#about'
+  match '/contact', :to => 'staticpages#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
