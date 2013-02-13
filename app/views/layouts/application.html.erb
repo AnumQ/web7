@@ -7,11 +7,103 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= link_to 'Home', '/home' %>
-<%= link_to 'Contact', '/contact' %>
-<%= link_to 'About', '/about' %>
-<%= link_to 'Help', '/help' %>
-<%= yield %>
+<div id="menu-wrapper">
+	<div id="menu">
+		<ul>
+			<li class="current_page_item"><a href="/home">Homepage</a></li>
+			<li><a href="/products">Products</a></li>
+			<li><a href="/about">About</a></li>
+			<li><a href="/contact">Contact</a></li>
+			<li><a href="/help">Help</a></li>
+		</ul>
+	</div>
+	<!-- end #menu -->
+</div>
 
+<div id="header-wrapper">
+	<div id="header">
+		<%= link_to 'Home', '/home' %>
+	<%= link_to 'Contact', '/contact' %>
+	<%= link_to 'About', '/about' %>
+	<%= link_to 'Help', '/help' %>
+		<div id="logo">
+			<h1><a href="#">Web<span>7</span></a></h1>
+		</div>
+	</div>
+</div>
+<div id="banner"><a href="#"><%= image_tag( "img04.jpg", :size => "1000x150", :alt => "") %></div>
+<div id="wrapper">
+	<!-- end #header -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<%= yield %>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Searh Here:</h2>
+							<div id="search" >
+								<form method="get" action="#">
+									<div>
+										<input type="text" name="s" id="search-text" value="" />
+										<input type="submit" id="search-submit" value="" />
+									</div>
+								</form>
+							</div>
+							<div style="clear: both;">&nbsp;</div>
+						</li>
+						<li>
+							<h2>Aliquam tempus</h2>
+							<p>Mauris vitae nisl nec metus placerat perdiet est. Phasellus dapibus semper consectetuer hendrerit.</p>
+						</li>
+						<li>
+							<h2>Categories</h2>
+							<ul>
+								<li><a href="#">Aliquam libero</a></li>
+								<li><a href="#">Consectetuer adipiscing elit</a></li>
+								<li><a href="#">Metus aliquam pellentesque</a></li>
+								<li><a href="#">Suspendisse iaculis mauris</a></li>
+								<li><a href="#">Urnanet non molestie semper</a></li>
+								<li><a href="#">Proin gravida orci porttitor</a></li>
+							</ul>
+						</li>
+						<li>
+							<h2>Blogroll</h2>
+							<ul>
+								<li><a href="#">Aliquam libero</a></li>
+								<li><a href="#">Consectetuer adipiscing elit</a></li>
+								<li><a href="#">Metus aliquam pellentesque</a></li>
+								<li><a href="#">Suspendisse iaculis mauris</a></li>
+								<li><a href="#">Urnanet non molestie semper</a></li>
+								<li><a href="#">Proin gravida orci porttitor</a></li>
+							</ul>
+						</li>
+						<li>
+							<h2>Archives</h2>
+							<ul>
+								<li><a href="#">Aliquam libero</a></li>
+								<li><a href="#">Consectetuer adipiscing elit</a></li>
+								<li><a href="#">Metus aliquam pellentesque</a></li>
+								<li><a href="#">Suspendisse iaculis mauris</a></li>
+								<li><a href="#">Urnanet non molestie semper</a></li>
+								<li><a href="#">Proin gravida orci porttitor</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer">
+	<p>&copy; 2013 Sitename.com. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://www.freecsstemplates.org">FCT</a>.</p>
+</div>
+<!-- end #footer -->
 </body>
 </html>
